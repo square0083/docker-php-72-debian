@@ -1,7 +1,7 @@
 FROM php:7.2.4-fpm
 MAINTAINER Liang Lei <square0083@gmail.com>
 
-RUN apt update -yqq && apt upgrade -ypp \
+RUN apt update -yqq && apt upgrade -yqq \
 	&& apt install wget libyaml-dev libmemcached-dev zlib1g zlib1g-dev libgearman-dev libpng-dev libxml2-dev libgmp-dev libmagickwand-dev \
 	
 	&& docker-php-ext-install gd pdo pdo_mysql bcmath pcntl opcache calendar dba dom gettext gmp intl json zip \
